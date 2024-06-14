@@ -13,15 +13,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-        Button btnLoginListener;
+        Button btnLogin;
+        Button btnRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        btnLoginListener = findViewById(R.id.btn_1);
-        btnLoginListener.setOnClickListener(new View.OnClickListener() {
+        btnLogin = findViewById(R.id.btn_1);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -29,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(pindahlogin);
             }
         });
+
+        btnRegister = findViewById(R.id.btn_2);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahlogin = new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(pindahlogin);
+            }
+        });
+
     }
 
 }
