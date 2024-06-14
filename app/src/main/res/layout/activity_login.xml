@@ -13,7 +13,7 @@
         android:src="@drawable/gmbr1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/L_img1"
+        android:id="@+id/L_img2"
         />
 
     <ImageView
@@ -21,12 +21,13 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_back"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:id="@+id/L_img1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/L_img1"
+        android:layout_below="@id/L_img2"
         android:text="Welcome Back!"
         android:textSize="18sp"
         android:layout_centerHorizontal="true"
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/L_txt1"
             android:src="@drawable/login"
-            android:id="@+id/L_img2"
+            android:id="@+id/L_img3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"/>
 
@@ -47,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/L_img2"
+        android:layout_below="@id/L_img3"
         android:padding="30dp"
         android:id="@+id/ly_1">
 
