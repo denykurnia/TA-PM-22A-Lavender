@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class BerandaActivity extends AppCompatActivity {
 
+    Button btnView;
     Button btnSearch;
     Button btnFav;
     Button btnPromo;
@@ -107,6 +108,17 @@ public class BerandaActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent pindahactivity = new Intent(BerandaActivity.this, OfferaActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
+
+        btnView = findViewById(R.id.B_btn2);
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(BerandaActivity.this, ViewallActivity.class);
                 startActivity(pindahactivity);
 
             }
