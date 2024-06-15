@@ -17,6 +17,7 @@ public class BerandaActivity extends AppCompatActivity {
 
     Button btnSearch;
     Button btnFav;
+    Button btnPromo;
 
 
     @SuppressLint("MissingInflatedId")
@@ -49,6 +50,17 @@ public class BerandaActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        btnPromo = findViewById(R.id.B_btn1);
+        btnPromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahpromo = new Intent(BerandaActivity.this, AmbilpromoActivity.class);
+                startActivity(pindahpromo);
+
             }
         });
 
