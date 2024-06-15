@@ -285,13 +285,14 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="20dp"
-                        android:id="@+id/B_banding">
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
+                            android:id="@+id/B_banding"
                             android:src="@drawable/compare" />
                     </LinearLayout>
 
