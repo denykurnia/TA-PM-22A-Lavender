@@ -3,6 +3,7 @@ package com.uti.lavender_sobat_organik;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    Button btnLogin;
     ImageView registerBack;
     TextView textLogin;
 
@@ -38,7 +40,18 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent pindahactivity = new Intent(RegisterActivity.this, LoginActivity.class);
+                Intent pindahactivity = new Intent(RegisterActivity.this, BerandaActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
+
+        btnLogin = findViewById(R.id.R_btn1);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(RegisterActivity.this, BerandaActivity.class);
                 startActivity(pindahactivity);
 
             }
