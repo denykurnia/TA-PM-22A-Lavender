@@ -170,14 +170,15 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="20dp"
-                        android:id="@+id/B_kategori">
+                        >
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="33dp"
+                            android:layout_height="40dp"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
-                            android:src="@drawable/kategori" />
+                            android:src="@drawable/kategori"
+                            android:id="@+id/B_kategori"/>
                     </LinearLayout>
 
                     <TextView
