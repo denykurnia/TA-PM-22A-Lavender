@@ -19,6 +19,7 @@ public class BerandaActivity extends AppCompatActivity {
     Button btnFav;
     Button btnPromo;
     ImageView btnKatagori;
+    ImageView btnDiskon;
 
 
     @SuppressLint("MissingInflatedId")
@@ -76,6 +77,16 @@ public class BerandaActivity extends AppCompatActivity {
             }
         });
 
+        btnDiskon = findViewById(R.id.B_diskon);
+        btnDiskon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(BerandaActivity.this, DiskonActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
 
     }
 }
