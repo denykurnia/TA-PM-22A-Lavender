@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class BerandaActivity extends AppCompatActivity {
 
     Button btnSearch;
+    Button btnFav;
 
 
     @SuppressLint("MissingInflatedId")
@@ -38,6 +39,18 @@ public class BerandaActivity extends AppCompatActivity {
             }
         });
 
+        btnFav=findViewById(R.id.B_fav);
+        btnFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent pindahfav = new Intent(BerandaActivity.this, FavoriteActivity.class);
+                    startActivity(pindahfav);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
     }
