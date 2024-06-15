@@ -17,6 +17,9 @@ public class BerandaActivity extends AppCompatActivity {
 
     Button btnSearch;
     Button btnFav;
+    Button btnPromo;
+    ImageView btnKatagori;
+    ImageView btnDiskon;
 
 
     @SuppressLint("MissingInflatedId")
@@ -52,6 +55,38 @@ public class BerandaActivity extends AppCompatActivity {
             }
         });
 
+        btnPromo = findViewById(R.id.B_btn1);
+        btnPromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahpromo = new Intent(BerandaActivity.this, AmbilpromoActivity.class);
+                startActivity(pindahpromo);
+
+            }
+        });
+
+        btnKatagori = findViewById(R.id.B_kategori);
+        btnKatagori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(BerandaActivity.this, KategoriActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
+
+        btnDiskon = findViewById(R.id.B_diskon);
+        btnDiskon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(BerandaActivity.this, DiskonActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
 
     }
 }

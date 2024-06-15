@@ -12,10 +12,12 @@
     <androidx.appcompat.widget.Toolbar
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:paddingTop="10dp"
             android:layout_height="wrap_content">
             <TextView
                 android:textColor="@color/putih"
@@ -168,14 +170,15 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="20dp"
-                        android:id="@+id/B_kategori">
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
-                            android:src="@drawable/kategori" />
+                            android:src="@drawable/kategori"
+                            android:id="@+id/B_kategori"/>
                     </LinearLayout>
 
                     <TextView
@@ -205,7 +208,7 @@
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
                         android:padding="20dp"
-                        android:id="@+id/B_diskon">
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -213,6 +216,7 @@
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
                             android:src="@drawable/offer"
+                            android:id="@+id/B_diskon"
                             />
                     </LinearLayout>
 
