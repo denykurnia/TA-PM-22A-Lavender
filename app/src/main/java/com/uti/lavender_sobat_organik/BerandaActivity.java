@@ -20,6 +20,7 @@ public class BerandaActivity extends AppCompatActivity {
     Button btnPromo;
     ImageView btnKatagori;
     ImageView btnDiskon;
+    ImageView btnIpromo;
 
 
     @SuppressLint("MissingInflatedId")
@@ -87,6 +88,18 @@ public class BerandaActivity extends AppCompatActivity {
 
             }
         });
+
+        btnIpromo = findViewById(R.id.B_promo);
+        btnIpromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pindahactivity = new Intent(BerandaActivity.this, PromoActivity.class);
+                startActivity(pindahactivity);
+
+            }
+        });
+
 
     }
 }
