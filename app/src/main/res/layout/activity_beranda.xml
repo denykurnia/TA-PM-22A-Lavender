@@ -35,7 +35,8 @@
                 android:textColor="@color/colorPrimary"
                 android:text="Cari Sesuatu..."
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:id="@+id/B_search"/>
             <RelativeLayout
                 android:layout_width="10dp"
                 android:layout_height="match_parent"/>
@@ -50,7 +51,8 @@
                     android:layout_gravity="center"
                     android:background="@drawable/ic_fav"
                     android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_height="30dp"
+                    android:id="@+id/B_fav"/>
             </androidx.cardview.widget.CardView>
             <RelativeLayout
                 android:layout_width="15dp"
@@ -141,7 +143,8 @@
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:text="Ambil Promo"
                         android:textAllCaps="false"
-                        android:textColor="@color/putih" />
+                        android:textColor="@color/putih"
+                        android:id="@+id/B_btn1"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -164,7 +167,8 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
-                        android:padding="20dp">
+                        android:padding="20dp"
+                        android:id="@+id/B_kategori">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -200,14 +204,16 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
-                        android:padding="20dp">
+                        android:padding="20dp"
+                        android:id="@+id/B_diskon">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:cropToPadding="true"
-                            android:src="@drawable/offer" />
+                            android:src="@drawable/offer"
+                            />
                     </LinearLayout>
 
                     <TextView
@@ -236,7 +242,8 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
-                        android:padding="20dp">
+                        android:padding="20dp"
+                        android:id="@+id/B_promo">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -272,7 +279,8 @@
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:orientation="horizontal"
-                        android:padding="20dp">
+                        android:padding="20dp"
+                        android:id="@+id/B_banding">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -294,233 +302,275 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="10dp"/>
-            <LinearLayout
-                android:padding="10dp"
 
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
                 android:background="@drawable/produk_khusus"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:padding="10dp">
                 <!--Title swipe-->
                 <LinearLayout
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:textColor="@color/putih"
-                        android:layout_weight="1"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
-                        android:text="Produk Terbaru"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    <Button
-                        android:textAllCaps="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Produk Terbaru"
                         android:textColor="@color/putih"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/B_btn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:backgroundTint="@color/colorPrimaryDark"
                         android:text="View All"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textAllCaps="false"
+                        android:textColor="@color/putih" />
                 </LinearLayout>
+
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <LinearLayout
-                        android:padding="15dp"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
 
                         <!--Card Produk-->
                         <LinearLayout
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:padding="4dp"
-                            android:background="@drawable/card_produk"
-                            android:orientation="vertical"
                             android:layout_width="140dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_produk"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
+
                                 <androidx.cardview.widget.CardView
-                                    app:cardCornerRadius="5dp"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="5dp">
+
                                     <ImageView
-                                        android:cropToPadding="false"
-                                        android:adjustViewBounds="true"
-                                        android:src="@drawable/g5"
+                                        android:id="@+id/B_img1"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/g5" />
                                 </androidx.cardview.widget.CardView>
                             </LinearLayout>
+
                             <LinearLayout
-                                android:layout_marginTop="5dp"
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
                                 <TextView
-                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="Aligator"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="12dp" />
+
                                 <TextView
-                                    android:textSize="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="7 tersedia"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="10dp" />
+
                                 <TextView
-                                    android:text="Rp.   60.000"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.   60.000" />
                             </LinearLayout>
                         </LinearLayout>
+
                         <RelativeLayout
                             android:layout_width="10dp"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
                         <!--Card Produk-->
                         <LinearLayout
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:padding="4dp"
-                            android:background="@drawable/card_produk"
-                            android:orientation="vertical"
                             android:layout_width="140dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_produk"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
+
                                 <androidx.cardview.widget.CardView
-                                    app:cardCornerRadius="5dp"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="5dp">
+
                                     <ImageView
-                                        android:cropToPadding="false"
-                                        android:adjustViewBounds="true"
-                                        android:src="@drawable/g1"
+                                        android:id="@+id/B_img2"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/g1" />
                                 </androidx.cardview.widget.CardView>
                             </LinearLayout>
+
                             <LinearLayout
-                                android:layout_marginTop="5dp"
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
                                 <TextView
-                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="Biolaris 550 SC"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="12dp" />
+
                                 <TextView
-                                    android:textSize="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="12 tersedia"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="10dp" />
+
                                 <TextView
-                                    android:text="Rp.   162.000"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.   162.000" />
                             </LinearLayout>
                         </LinearLayout>
+
                         <RelativeLayout
                             android:layout_width="10dp"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
                         <!--Card Produk-->
                         <LinearLayout
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:padding="4dp"
-                            android:background="@drawable/card_produk"
-                            android:orientation="vertical"
                             android:layout_width="140dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_produk"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
+
                                 <androidx.cardview.widget.CardView
-                                    app:cardCornerRadius="5dp"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="5dp">
+
                                     <ImageView
-                                        android:cropToPadding="false"
-                                        android:adjustViewBounds="true"
-                                        android:src="@drawable/g7"
+                                        android:id="@+id/B_img3"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/g7" />
                                 </androidx.cardview.widget.CardView>
                             </LinearLayout>
+
                             <LinearLayout
-                                android:layout_marginTop="5dp"
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
                                 <TextView
-                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="Tumpas 300 SC"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="12dp" />
+
                                 <TextView
-                                    android:textSize="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="4 tersedia"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="10dp" />
+
                                 <TextView
-                                    android:text="Rp.   160.000"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.   160.000" />
                             </LinearLayout>
                         </LinearLayout>
+
                         <RelativeLayout
                             android:layout_width="10dp"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
                         <!--Card Produk-->
                         <LinearLayout
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:padding="4dp"
-                            android:background="@drawable/card_produk"
-                            android:orientation="vertical"
                             android:layout_width="140dp"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_produk"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
+
                                 <androidx.cardview.widget.CardView
-                                    app:cardCornerRadius="5dp"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="5dp">
+
                                     <ImageView
-                                        android:cropToPadding="false"
-                                        android:adjustViewBounds="true"
-                                        android:src="@drawable/g6"
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:cropToPadding="false"
+                                        android:src="@drawable/g6"
+                                        android:id="@+id/B_img4"/>
                                 </androidx.cardview.widget.CardView>
                             </LinearLayout>
+
                             <LinearLayout
-                                android:layout_marginTop="5dp"
-                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
                                 <TextView
-                                    android:textSize="12dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="Armet 50 SP"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="12dp" />
+
                                 <TextView
-                                    android:textSize="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="9 tersedia"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="10dp" />
+
                                 <TextView
-                                    android:text="Rp.   80.000"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.   80.000" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -528,7 +578,6 @@
                 </HorizontalScrollView>
             </LinearLayout>
 
-            <!--Produk Lainnya-->
             <LinearLayout
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="15dp"
@@ -550,7 +599,8 @@
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:text="View All"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:id="@+id/B_btn3"/>
             </LinearLayout>
             <LinearLayout
                 android:padding="15dp"
@@ -583,7 +633,8 @@
                                     android:adjustViewBounds="true"
                                     android:src="@drawable/g2"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/B_img5"/>
                             </androidx.cardview.widget.CardView>
                         </LinearLayout>
                         <LinearLayout
@@ -636,7 +687,8 @@
                                     android:adjustViewBounds="true"
                                     android:src="@drawable/g3"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/B_img6"/>
                             </androidx.cardview.widget.CardView>
                         </LinearLayout>
                         <LinearLayout

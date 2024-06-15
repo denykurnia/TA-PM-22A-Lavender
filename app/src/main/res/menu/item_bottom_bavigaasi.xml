@@ -3,11 +3,8 @@
     <item android:title="home"
         android:id="@+id/home"
         android:icon="@drawable/ic_homee"/>
-    <item android:title="feed"
-        android:id="@+id/feed"
-        android:icon="@drawable/ic_feed"/>
-    <item android:title="cart"
-        android:id="@+id/cart"
+    <item android:title="shop"
+        android:id="@+id/shop"
         android:icon="@drawable/ic_shopping"/>
     <item android:title="pesan"
         android:id="@+id/pesan"
