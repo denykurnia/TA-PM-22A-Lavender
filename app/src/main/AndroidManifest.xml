@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Lavender_sobat_organik"
         tools:targetApi="31">
         <activity
+            android:name=".PesanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ShopActivity"
             android:exported="false"
             android:label="@string/title_activity_shop"
