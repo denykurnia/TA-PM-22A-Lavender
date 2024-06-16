@@ -409,6 +409,7 @@
                         <!--Card Produk-->
                         <LinearLayout
                             android:layout_width="140dp"
+                            android:id="@+id/B_lyproduk1"
                             android:layout_height="wrap_content"
                             android:background="@drawable/card_produk"
                             android:clickable="true"
@@ -723,6 +724,7 @@
         app:labelVisibilityMode="labeled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigasi"
         android:background="@color/colorPrimary"
         app:menu="@menu/item_bottom_bavigaasi"/>
 

@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.Lavender_sobat_organik" parent="Base.Theme.Lavender_sobat_organik" />
+    <style name="Theme.Lavender_sobat_organik.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Lavender_sobat_organik.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Lavender_sobat_organik.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
